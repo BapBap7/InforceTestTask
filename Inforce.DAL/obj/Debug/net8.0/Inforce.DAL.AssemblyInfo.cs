@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Inforce.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a17687889b1c0480b50b66a36021661535a5d8d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cf3e4677231d9b538030b5d51f6449ed901fcee")]
 [assembly: System.Reflection.AssemblyProductAttribute("Inforce.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Inforce.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

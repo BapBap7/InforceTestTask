@@ -44,22 +44,6 @@ public sealed class TokenService : ITokenService
         return token;
     }
 
-    public JwtSecurityToken RefreshToken(string token)
-    {
-        var principles = GetPrinciplesFromToken(token);
-        var tokenDescriptor = new SecurityTokenDescriptor()
-        {
-            Subject = new ClaimsIdentity(principles.Claims),
-            Expires = DateTime.UtcNow.AddHours(_jwtOptions.LifetimeInHours),
-            SigningCredentials = _signingCredentials,
-            Issuer = _jwtOptions.Issuer,
-            Audience = _jwtOptions.Audience
-        };
-        var newToken = _jwtSecurityTokenHandler.CreateJwtSecurityToken(tokenDescriptor);
-
-        return newToken;
-    }
-
     private ClaimsPrincipal GetPrinciplesFromToken(string token)
     {
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOptions.Key));

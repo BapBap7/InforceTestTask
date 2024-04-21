@@ -49,11 +49,14 @@ var app = builder.Build();
 app.UseCors(opt => { opt.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:3000"); });
 
 // Configure the HTTP request pipeline.
-
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseStaticFiles();
 app.UseForwardedHeaders();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+
 
 if (app.Environment.IsDevelopment())
 {

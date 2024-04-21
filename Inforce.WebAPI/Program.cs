@@ -1,3 +1,4 @@
+using FluentResults;
 using Inforce.BLL.Interfaces.Authentication;
 using Inforce.BLL.Services.Authentication;
 using Inforce.DAL.Enums;
@@ -59,6 +60,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// i don't know how to implement this in mediator
+app.MapGet("api/{code}", async (string code, MyDbContext dbContext) =>
+{
+    var shortenedUrl = await dbContext.ShortenedUrls.FirstOrDefaultAsync(s => s.Code == code);
+
+    if (shortenedUrl is null)
+    {
+        return Results.NotFound();
+    }
+
+    return Results.Redirect(shortenedUrl.LongUrl);
+});
 
 using (var scope = app.Services.CreateScope())
 {

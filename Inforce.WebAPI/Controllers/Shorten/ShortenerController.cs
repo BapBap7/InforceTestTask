@@ -1,6 +1,5 @@
 ﻿using Inforce.BLL.DTO.Shorten;
 using Inforce.BLL.MediatR.Shorten.Create;
-using Inforce.BLL.MediatR.Shorten.Redirect;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Inforce.WebAPI.Controllers.Shorten;
@@ -14,10 +13,4 @@ public class ShortenerController : BaseApiController
     {
         return HandleResult(await Mediator.Send(new CreateShortenCommand(shortenDto, HttpContext)));
     }
-
-    // [HttpGet]
-    // public async Task<IResult> Redirect(string code)
-    // {
-    //     return HandleResult(await Mediator.Send(new RedirectUrlCommand(code)));
-    // }
 }

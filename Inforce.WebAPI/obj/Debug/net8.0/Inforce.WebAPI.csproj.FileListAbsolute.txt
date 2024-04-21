@@ -164,3 +164,4 @@ C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.Web
 C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.WebAPI\obj\Debug\net8.0\Inforce.WebAPI.pdb
 C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.WebAPI\obj\Debug\net8.0\Inforce.WebAPI.genruntimeconfig.cache
 C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.WebAPI\obj\Debug\net8.0\ref\Inforce.WebAPI.dll
+C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.WebAPI\obj\Debug\net8.0\Inforce.WebAPI.sourcelink.json

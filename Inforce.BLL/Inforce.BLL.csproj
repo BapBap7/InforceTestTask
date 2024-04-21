@@ -33,10 +33,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="DTO\Authentication\Login\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Inforce.DAL\Inforce.DAL.csproj" />
     </ItemGroup>
 

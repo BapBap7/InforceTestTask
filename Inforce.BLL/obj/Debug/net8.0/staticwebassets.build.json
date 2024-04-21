@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "siCQSlb8j+ESexgbj0MiAO737yZCZnzFhfyshT0dTn8=",
+  "Hash": "iYMCIBv+JherTJox0eUAZzNyrOcThYfXnhrAzwWJ0Qs=",
   "Source": "Inforce.BLL",
   "BasePath": "_content/Inforce.BLL",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "Inforce.DAL",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],

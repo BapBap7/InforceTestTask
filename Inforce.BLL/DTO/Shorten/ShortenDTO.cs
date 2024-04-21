@@ -1,0 +1,14 @@
+﻿namespace Inforce.BLL.DTO.Shorten;
+
+public class ShortenDTO
+{
+    public string Id { get; set; }
+    
+    public string LongUrl { get; set; }
+    
+    public string ShortUrl { get; set; }
+
+    public string Code { get; set; }
+    
+    public DateTime CreatedOnUtc { get; set; }
+}

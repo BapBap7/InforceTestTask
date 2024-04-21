@@ -23,3 +23,4 @@ C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.BLL
 C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.BLL\obj\Debug\net8.0\Inforce.BLL.pdb
 C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.BLL\obj\Debug\net8.0\Inforce.BLL.genruntimeconfig.cache
 C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.BLL\obj\Debug\net8.0\ref\Inforce.BLL.dll
+C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.BLL\obj\Debug\net8.0\Inforce.BLL.sourcelink.json

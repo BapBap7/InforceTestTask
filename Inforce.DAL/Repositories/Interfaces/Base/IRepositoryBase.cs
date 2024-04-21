@@ -12,6 +12,8 @@ public interface IRepositoryBase<T>
         Expression<Func<T, bool>>? predicate = default,
         Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = default);
     
+    Task<T> CreateAsync(T entity);
+    
     T Create(T entity);
     
     EntityEntry<T> Update(T entity);

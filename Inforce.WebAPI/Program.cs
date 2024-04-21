@@ -7,7 +7,7 @@ using Inforce.DAL.Repositories.Realizations.Base;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Inforce.WebAPI.Extension;
+using Inforce.WebAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,16 +17,19 @@ builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
-builder.Services.AddAuthentication();
-builder.Services.AddAuthorization();
+builder.Services.AddCustomServices();
+builder.Services.AddSwaggerServices();
 
-var currentAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+builder.Services.AddHttpContextAccessor();
+
+var currentAssemblies = AppDomain.CurrentDomain.Load("Inforce.BLL");
 builder.Services.AddAutoMapper(currentAssemblies);
 builder.Services.AddMediatR(currentAssemblies);
 
 // Add MVC services for controllers
 builder.Services.AddControllers(); // This line is necessary
-
+builder.Services.AddCustomServices();
+builder.Services.AddApplicationServices(builder.Configuration);
 
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -35,13 +38,17 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 builder.Services.AddIdentity<Inforce.DAL.Entities.Users.User, IdentityRole>()
     .AddEntityFrameworkStores<MyDbContext>();
 
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
 app.UseCors(opt => { opt.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:3000"); });
 
 // Configure the HTTP request pipeline.
+
 app.UseForwardedHeaders();
 app.UseAuthentication();
 app.UseAuthorization();
@@ -72,8 +79,6 @@ async Task EnsureRolesAsync(RoleManager<IdentityRole> roleManager)
         await roleManager.CreateAsync(new IdentityRole(nameof(UserRole.User)));
     }
 }
-
-await app.ApplyMigrations();
 
 app.UseHttpsRedirection();
 

@@ -20,3 +20,4 @@ C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.DAL
 C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.DAL\obj\Debug\net8.0\Inforce.DAL.pdb
 C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.DAL\obj\Debug\net8.0\Inforce.DAL.genruntimeconfig.cache
 C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.DAL\obj\Debug\net8.0\ref\Inforce.DAL.dll
+C:\Users\Complukter\Desktop\Work\Programming\TestTask\Inforce.WebAPI\Inforce.DAL\obj\Debug\net8.0\Inforce.DAL.sourcelink.json

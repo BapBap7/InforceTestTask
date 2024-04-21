@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Inforce.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1849b676ddaad6f9575f4c3ad55d8f05af13147e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a17687889b1c0480b50b66a36021661535a5d8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Inforce.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Inforce.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
